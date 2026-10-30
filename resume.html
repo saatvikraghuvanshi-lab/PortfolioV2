@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Saatvik Raghuvanshi - Resume</title>
+    <style>
+      /* ATS-first: one column, no floats, no grid, no tables, no icons, no
+         letter-spacing. Bullets are real text via ::before so the PDF text
+         layer keeps them (CSS list markers are dropped by many extractors). */
+      @page {
+        size: A4;
+        margin: 8mm 13mm;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: #ffffff;
+        color: #111111;
+      }
+
+      body {
+        font-family: Arial, Helvetica, "Liberation Sans", sans-serif;
+        font-size: 9.2pt;
+        line-height: 1.26;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 16.5pt;
+        font-weight: 700;
+        line-height: 1.1;
+        letter-spacing: 0;
+      }
+
+      .role {
+        margin: 0.9mm 0 0;
+        font-size: 9.4pt;
+        font-weight: 700;
+      }
+
+      .contact {
+        margin: 0.6mm 0 0;
+        font-size: 8.8pt;
+      }
+
+      .contact a {
+        color: #111111;
+        text-decoration: none;
+      }
+
+      header {
+        padding-bottom: 2mm;
+        border-bottom: 1pt solid #111111;
+      }
+
+      h2 {
+        margin: 2mm 0 0.8mm;
+        padding-bottom: 0.4mm;
+        font-size: 9.4pt;
+        font-weight: 700;
+        letter-spacing: 0;
+        border-bottom: 0.5pt solid #8a8a8a;
+        page-break-after: avoid;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      .entry {
+        margin: 0 0 1.1mm;
+        page-break-inside: avoid;
+      }
+
+      .entry:last-child {
+        margin-bottom: 0;
+      }
+
+      .line--meta {
+        font-size: 8.8pt;
+        color: #222222;
+      }
+
+      ul {
+        margin: 0.5mm 0 0;
+        padding-left: 4mm;
+        list-style: none;
+      }
+
+      li {
+        margin: 0 0 0.35mm;
+        padding-left: 0;
+        text-indent: -4mm;
+      }
+
+      li::before {
+        content: "\2022\00a0";
+      }
+
+      li:last-child {
+        margin-bottom: 0;
+      }
+
+      .skills p {
+        margin: 0 0 0.4mm;
+      }
+
+      .skills p:last-child {
+        margin-bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Saatvik Raghuvanshi</h1>
+      <p class="role">Computer Science Undergraduate | Full-Stack Developer</p>
+      <p class="contact">
+        Jaipur, India |
+        <a href="mailto:raghuvanshisaatvik@gmail.com">raghuvanshisaatvik@gmail.com</a> |
+        <a href="https://github.com/saatvikraghuvanshi-lab">github.com/saatvikraghuvanshi-lab</a> |
+        <a href="https://www.linkedin.com/in/saatvik-raghuvanshi"
+          >linkedin.com/in/saatvik-raghuvanshi</a
+        >
+      </p>
+    </header>
+
+    <h2>Summary</h2>
+    <p>
+      Computer science undergraduate at Manipal University Jaipur who learns by shipping. Eight
+      deployed projects across full-stack web, geospatial interfaces and AI-assisted tools, including
+      an ISRO hackathon mission-planning console. Comfortable owning a product end to end: database
+      schema, API layer, interface and deployment.
+    </p>
+
+    <h2>Technical Skills</h2>
+    <div class="skills">
+      <p><b>Languages:</b> Java, TypeScript, JavaScript, Python, C, SQL, HTML, CSS</p>
+      <p>
+        <b>Frontend:</b> React, Next.js, Vite, Tailwind CSS, shadcn/ui, Radix UI, Redux, Motion,
+        MapLibre GL, Leaflet
+      </p>
+      <p>
+        <b>Backend and Data:</b> Node.js, PostgreSQL, PostGIS, Supabase, Prisma, Convex, Inngest,
+        REST APIs, Gemini API
+      </p>
+      <p>
+        <b>Cloud and Tooling:</b> Git, GitHub, Vercel, Cloudflare Pages, Google Cloud, Azure, Docker,
+        Linux, CI/CD, Figma, AutoCAD
+      </p>
+    </div>
+
+    <h2>Experience</h2>
+
+    <div class="entry">
+      <p><b>Freelance Full-Stack Developer</b> | Independent, Remote | 2026 - Present</p>
+      <ul>
+        <li>
+          Ship client sites and product demos end to end: frontend, backend, relational schema,
+          deployment on Vercel and Supabase, and the maintenance after launch.
+        </li>
+        <li>
+          Built and released VibeBatch, a social personality product with a PostgreSQL schema,
+          row-level security, invite flows and an AI support assistant (live at vibebatch.net).
+        </li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <p>
+        <b>Cloud Computing and Cybersecurity Intern</b> | Interns Elite, Remote | May 2026 - Jul 2026
+      </p>
+      <ul>
+        <li>
+          Completed a three-month program across Azure, Docker, CI/CD pipelines, Linux administration
+          and cloud security, applied to deployed workloads rather than slideware.
+        </li>
+      </ul>
+    </div>
+
+    <h2>Projects</h2>
+
+    <div class="entry">
+      <p><b>OrbitalQuery V2.0</b> | Earth Observation Console | 2026</p>
+      <p class="line--meta">Next.js, TypeScript, MapLibre GL, FastAPI, Python, Google Cloud Run</p>
+      <ul>
+        <li>
+          Built a natural-language console that parses a query, finds Sentinel-2 scenes through STAC
+          and reports quantified land change with per-region NDVI shift.
+        </li>
+        <li>
+          Split the pipeline across Next.js routes, the Planetary Computer STAC API and a Python
+          rasterio service on Cloud Run, streaming Cloud Optimized GeoTIFF windows instead of full
+          scenes.
+        </li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <p><b>Lunar Ice Intelligence</b> | Mission Planning Console | 2026</p>
+      <p class="line--meta">Next.js, Prisma, PostgreSQL, Python, Chandrayaan-2 DFSAR</p>
+      <ul>
+        <li>
+          Built the ISRO Bharatiya Antariksh Hackathon 2026 finalist entry (Problem Statement 8),
+          fusing radar, terrain, hazard and illumination evidence to rank subsurface ice targets.
+        </li>
+        <li>
+          Implemented CPR and DOP threshold gating, solar-aware A* traverse routing, and separate
+          measurement, inference and assumption registers.
+        </li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <p><b>ShockProof</b> | Household Energy Tariff Guard | 2026</p>
+      <p class="line--meta">Next.js, Supabase, PostgreSQL, Gemini API, Vercel</p>
+      <ul>
+        <li>
+          Built meter-photo OCR that extracts readings and projects month-end usage, distance to the
+          next tariff slab, estimated bill and bill risk against Rajasthan tariff data.
+        </li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <p><b>Airport Management System</b> | Java Desktop Application | 2026</p>
+      <p class="line--meta">Java, Swing, JDBC, MySQL, SQL</p>
+      <ul>
+        <li>
+          Designed a nine-table relational schema with foreign keys and a unique (flight_id,
+          seat_no) constraint against double booking, plus the DAO layer and the full booking,
+          payment, check-in and boarding-pass flow.
+        </li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <p><b>Additional Projects</b> | S2C, ResilienceOS, JanSahayak</p>
+      <ul>
+        <li>
+          Shipped S2C (AI-assisted study-to-card SaaS on Next.js, Supabase and Gemini), designed the
+          ResilienceOS disaster-response interface, and built JanSahayak, a civic-tech AI assistant.
+        </li>
+      </ul>
+    </div>
+
+    <h2>Education</h2>
+
+    <div class="entry">
+      <p>
+        <b>B.Tech, Computer Science and Engineering</b> | Manipal University Jaipur | 2025 - 2029
+      </p>
+      <ul>
+        <li>
+          Scored 86% in Class 10 (Army Public School) and 82% in Class 12 (Resonance); current GPA
+          7.0.
+        </li>
+      </ul>
+    </div>
+
+    <h2>Certifications</h2>
+    <ul>
+      <li>
+        Completed Cybersecurity and Cloud Computing (Interns Elite, 2026: Azure, Docker, CI/CD,
+        Linux) and the AI Tools Workshop (be10x, 2026: AI Studio, NotebookLM, Claude, n8n).
+      </li>
+    </ul>
+
+    <h2>Achievements</h2>
+    <ul>
+      <li>
+        Reached the finals of the Bharatiya Antariksh Hackathon 2026 - ISRO Problem Statement 8,
+        Lunar Ice Intelligence.
+      </li>
+      <li>Placed 4th at the Startup Forge Ideathon - GCEC Global Foundation, 2025.</li>
+      <li>Reached the Top 5 at the Rewind and Recode National Hackathon - JanSahayak, 2025.</li>
+      <li>Entered Round 00 of Craft N Code - Cyber Space Club, MUJ x Techfest IIIT Bhubaneswar.</li>
+      <li>Entered INDIA RUNS 2026 Ideathon with ShockProof, team Noble Dawn.</li>
+      <li>
+        Completed the Robotics Workshop at Techfest IIT Bombay and the WRC Quadcopter Challenge,
+        2025.
+      </li>
+    </ul>
+  </body>
+</html>
